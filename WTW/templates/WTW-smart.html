@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+	<!--Background setting of WTW-Computer website -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>WTW-Computer</title>
+	<link rel="icon" href="img/wtw_psf_1.ico">
+	
+	<!--For connecting the css & javascript -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+	
+	<!--For setting the background -->
+	<style>
+		body{
+			background-color: #e0e0eb
+		}
+	</style>
+	
+
+</head>
+<body>
+	<!--Setting the top of the website -->
+	<nav class="navbar sticky-top navbar-expand-sm navbar-dark" style="background-color: #f0f0f5">
+	<a class="navbar-brand" style="color:#3399ff" herf="#"><img src="static/image/WTW.png" title="WTW Computer" alt="WTW Business Logo"><img src="static/image/®.png" alt="Rights logo" width="15" height="15"></a>
+	
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headNavbar">
+    <span class="navbar-toggler-icon"></span>
+  	</button>
+		
+  	<div class="collapse navbar-collapse" id="headNavbar">
+  		<ul class="navbar-nav">
+		<li class="nav-item">
+			<a class="nav-link " style="color:#EE3131;font-weight: bold; "  href="http://localhost:5000/" title="Home Page of WTW Computer">Home</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link " style="color:#EE3131;font-weight: bold; "  href="http://localhost:5000/About" title="Know more about WTW-Computer">About Us</a>
+		</li>
+<!--
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" style="color:#EE3131;font-weight: bold; "  href="#" data-toggle="dropdown" >Online shop</a>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="http://localhost:5000/set_list">Sets of PC</a>
+				<a class="dropdown-item" href="http://localhost:5000/smartphone">Smartphones</a>
+			</div>
+		</li>
+-->
+		<li class="nav-item">
+			<a class="nav-link " style="color:#EE3131;font-weight: bold; "  href="http://localhost:5000/set_list" title="Know more about WTW-Computer">Sets of PC</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link " style="color:#EE3131;font-weight: bold; "  href="http://localhost:5000/smartphone" title="Know more about WTW-Computer">Sets of PC</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link " style="color:#EE3131;font-weight: bold; "  href="http://localhost:5000/reg" title="To be our member">Sign Up</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link " style="color:#EE3131;font-weight: bold; "  href="http://localhost:5000/login" title="To login our system">Sign In</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link " style="color:#EE3131;font-weight: bold; "  href="http://localhost:5000/staff" title="For staff only">Staff</a>
+		</li>
+		</ul>
+		</div>
+	</nav>
+
+
+
+<div class="row ">
+
+    <div class="col-12" >
+    	<p><h2>This page selling mibile phone products </h2></p>
+
+      <div id="list_of_product">
+      	<div class="product"  style="padding: 5px;">
+            {% for item in data %}
+        <div class="row">
+          <div class="col-sm-4 col-xl-2  ">
+            <p><img src="/static/image/product/{{item[0]}}.jpeg" class="product_photo" style=" height: 100% ;width:100%; max-width: 200px; max-height: 200px"></p>
+          </div>
+
+
+              <tr>
+                <td>Product ID: {{item[0]}}</td><br>
+                <td>Phone Name: {{item[1]}}</td><br>
+                <td>Brand: {{item[2]}}</td><br>
+                <td>Type: {{item[3]}}</td><br>
+                <td>Rom: {{item[4]}}</td><br>
+                <td>Price: {{item[5]}}</td><br>
+                <td><h3>If you want to buy this product, please login for next step</h3><br><br></td>
+                <hr style="height:1px;border-top:1px solid #f00" /><br>
+
+                </form>
+              </tr>
+
+              <br>
+              
+              {% endfor %}
+            
+          </div>
+        </div>
+      </div>
+      <br>
+      </div>
+  </div>
+          
+          
+          
+          
+
+      
+
+
+      
+    </div>
+  </div>
+    
+  </div>
+
+
+  
+  
+
+</div> 
+<footer class="footer">
+    <div class ="container">
+    <p class="text-xs-center">Copyright (c) 2019 WTW-Compuer </p>
+    
+    </div>
+  </footer>
+</body>
+</html>
